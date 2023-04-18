@@ -9,8 +9,8 @@ import GetStarted from '../pages/GetStarted/GetStarted'
 const Index = () => {
   return (
     <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<CreateAccount />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/CreateAccount" element={<CreateAccount />} />
         <Route path="/create-account" element={<Register />} />
         <Route path="/VerifyAccount" element={<VerifyAccount />} />
         <Route path="/GetStarted" element={<GetStarted />} />

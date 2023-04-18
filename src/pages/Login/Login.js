@@ -1,22 +1,26 @@
 import React from 'react'
 import logo from '../../assets/logo.svg'
 import './LoginStyles.css'
+import { NavLink } from 'react-router-dom'
 
 const Login = () => {
   return (
     <div className='w-100 login'>
-        <nav className='w-100 bg-white'>
-          <div className=' container d-flex justify-content-between border'>
-
-            <div className='logo  '>
+        <nav className='w-100 bg-white align-items-center h-20'>
+          <div className='d-flex mx-sm-1 mx-md-5 mx-lg-5 justify-content-between'>
+            <div className='logo my-3'>
                 <img src={logo} alt='logo' className='logo'/>
             </div>
-            <div className='button'>
-                <button className='btn btn-primary '>Create An Account</button>
+            <div className='button my-3'>
+                <button className='btn btn-primary '>
+                <NavLink to='/create-account' className='fs-5'>
+                Create An Account
+                </NavLink>
+                </button>
             </div>
           </div>
         </nav>
-        <div className='card mt-5 w-50 border-0 px-5 mx-auto'>
+        <div className='card mt-5 w-50  w-md-25 w-lg-10 border-0  mx-auto'>
             <div className='card-body mt-4'>
                 <h1 className='card-title text-center mb-5'>Log In</h1>
                 <form >

@@ -9,11 +9,11 @@ const Register = () => {
   return (
     <div className='container-fluid reg'>
         <nav className='container py-3 mb-5 d-flex justify-content-between align-items-center'>
-            <div className='bg-cover w-25'>
-                <img src={logo} alt='logo' className='logo'/>
+            <div className='w-25'>
+                <img src={logo} alt='logo' className='bg-cover w-100 h-100'/>
             </div>
             <div className='button w-25'>
-                <button className='btn btn-primary ms-4 w-75'>Log in</button>
+                <button className='btn btn-primary w-75'>Log in</button>
             </div>
         </nav>
         <div className='card w-50 border-0 px-5 mx-auto'>
