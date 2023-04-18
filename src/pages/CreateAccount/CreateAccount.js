@@ -1,8 +1,10 @@
 import React from 'react'
 import logo from '../../assets/logo.svg'
 import './CreateAccountStyles.css'
+import { useNavigate } from 'react-router-dom'
 
 const CreateAccount = () => {
+    const navigate = useNavigate()
   return (
     <div className='w-100 create'>
      <nav className='w-100 bg-white'>
@@ -35,7 +37,12 @@ const CreateAccount = () => {
                         <label className='form-check-label' for='flexCheckDefault'>
                             I've read and agreed to the Terms of Service
                         </label>
-                        <button className='btn btn-primary w-100 mb-3'>Create An Account</button>
+                        <button className='btn btn-primary w-100 mb-3'
+                        onClick={(e) =>{
+                            e.preventDefault();
+                            navigate('/VerifyAccount')
+                        }}
+                        >Create An Account</button>
                         <p className='text-center'>Already have an account? Log in</p>
                     </div>
                 </form>

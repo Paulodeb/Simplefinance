@@ -1,0 +1,10 @@
+.image-background{
+    height: 80vh;
+    background-color: #cdcdcd;
+}
+
+.image-background .image1{
+    height: 70%;
+    width: 50%;
+    object-position: center;
+}
