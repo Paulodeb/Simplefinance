@@ -11,7 +11,7 @@ const Login = () => {
             <div className=' my-0'>
                 <img src={logo} alt='logo' className='w-75 w-md-100'/>
             </div>
-            <div className='d-flex  my-1 '>
+            <div className=' my-1 '>
                 <button className='btn btn-primary btn-lg btn-block btn-sm '>
                 <NavLink to='/create-account' className='small'>
                 Create An Account
@@ -21,18 +21,19 @@ const Login = () => {
           </div>
         </nav>
     <div className='card-container'>
-        <div className='inner-container'>
-            <div className='card-body mt-4'>
-                <h1 className='card-title text-center mb-5'>Log In</h1>
-                <form >
-                    <div className='form-group px-md-5 px-2'>
-                        <label className='mb-2' htmlFor='name'>Email Address</label>
-                        <input type='email' className='form-control mb-4' id='email' placeholder='Enter your email address'/>
-                        <label className='mb-2' htmlFor='name'>Password</label>
+        <div className='inner-container px-2  pt-4  px-sm-3' >
+            <div className='card-body pt-3'>
+                <h1 className='card-title text-center mb-4 '>Log In</h1>
+                <form className='form-container' >
+                    <div className='form-group w-100'>
+                        <label className='mb-2 ms-1' htmlFor='name'>Email Address</label>
+                        <input type='email' className='form-control mb-3' id='email' placeholder='Enter your email address'/>
+                        <label className='mb-2 ms-1' htmlFor='name'>Password</label>
                         <input type='password' className='form-control mb-1' id='password' placeholder='Enter your password'/>
-                        <NavLink  className='text-end'>Forgot Password?</NavLink>
-                        <button className='btn btn-primary w-100 mb-3'>Log In</button>
-                        <p className='text-center'>Don't have an account? Register here</p>
+                        <NavLink  className='text-end mb-3'>Forgot Password?</NavLink>
+                        <button className='btn btn-primary w-100 mt-3 mb-2'>Log In</button>
+                        <p className='text-center'>Don't have an account? 
+                        <NavLink>Register here</NavLink></p>
                     </div>
                 </form>
             </div>
