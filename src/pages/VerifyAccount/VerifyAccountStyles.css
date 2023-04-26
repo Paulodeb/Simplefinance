@@ -1,0 +1,19 @@
+.verify{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+
+.otp-image{
+    width: 100%;
+    height: 60vh;
+    object-fit: center;
+}
+
+@media screen and (max-width: 789px){
+    .verify{
+        margin-top: 2rem;
+    }
+}
+    

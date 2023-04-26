@@ -1,20 +1,26 @@
 import React from 'react'
 import './RegisterStyles.css'
 import logo from '../../assets/logo.svg'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 
 const Register = () => {
     const navigate = useNavigate()
   return (
     <div className='container-fluid reg'>
-        <nav className='container py-3 mb-5 d-flex justify-content-between align-items-center'>
-            <div className='w-25'>
-                <img src={logo} alt='logo' className='bg-cover w-100 h-100'/>
+         <nav className='nav-container'>
+          <div className='d-flex pt-1 pt-sm-2 pt-lg-3 mx-1 mx-md-5 mx-lg-5 justify-content-between align-items-center'>
+            <div className=' my-0'>
+                <img src={logo} alt='logo' className='w-75 w-md-100'/>
             </div>
-            <div className='button w-25'>
-                <button className='btn btn-primary w-75'>Log in</button>
+            <div className=' my-1 '>
+                <button className='btn btn-primary w-100 btn-lg btn-block btn-sm '>
+                <NavLink to='/' className='small'>
+                Log in
+                </NavLink>
+                </button>
             </div>
+          </div>
         </nav>
         <div className='card w-50 border-0 px-5 mx-auto'>
             <div className='card-body mt-4'>
