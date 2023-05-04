@@ -34,7 +34,23 @@ const Wallet = () => {
             <h3>Wallet</h3>
              <button className="btn btn-primary">Add New Wallet</button>
             </div>
-
+            <div className="row container mt-2">
+            <div className="col-5 card border">
+            <div className="card-body">
+            <h5 className="card-title">Wallet 1</h5>
+            </div>
+            </div>
+            <div className="col-5 card border">
+            <div className="card-body">
+            <h5 className="card-title">Wallet 2</h5>
+            </div>
+            </div>
+            <div className="col-2 card border">
+            <div className="card-body">
+            <h5 className="card-title">Wallet 3</h5>
+            </div>
+            </div>
+            </div>
 
         </div>
 
