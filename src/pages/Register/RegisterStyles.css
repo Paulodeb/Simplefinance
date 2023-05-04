@@ -9,6 +9,11 @@
    
 }
 
+.width{
+    max-width: 600px;
+    /* max-height: 60vh; */
+}
+
  .button .btn{
     background-color: #3fbcfc;
     /* height: 48px; */

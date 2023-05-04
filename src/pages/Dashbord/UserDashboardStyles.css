@@ -1,0 +1,47 @@
+
+.ab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: hsl(0, 89%, 39%);
+    font-size: 0.5rem;
+    margin-top: -2rem;
+
+}
+
+.padding-top{
+    padding-top: 5.5rem;
+}
+@media screen and (max-width: 575px) {
+    .padding-top{
+        padding-top: 8rem;
+    }
+}
+    
+.cover{
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.email-text{
+    font-size: 0.7rem;
+    /* margin-top: -0.3rem; */
+}
+.height{
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.btn-text{
+    font-size: 0.6rem;
+    padding: 0rem 0.4rem;
+    height: 1.5rem;
+}
+
+.input-arrow{
+    margin-left: -1rem;
+}
