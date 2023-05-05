@@ -9,15 +9,15 @@ const OrgProfile1 = () => {
 
   return (
     <div>
-       <nav className="navbar login border navbar-expand-lg navbar-light bg-white">
+       <nav className="navbar login border navbar-expand-lg navbar-light fixed-top bg-white">
         <div className="container-fluid">
           <NavLink to="/" className="navbar-brand w-50">
             <img src={logo} alt="logo" className="img-fluid" />
           </NavLink>
         </div>
       </nav>
-      <div className='row'>
-        <div className='col-md-6 container px-5 bg-light'> 
+      <div className='row org-container'>
+        <div className='col-md-5 container px-5 bg-light'> 
           <h3 className='px-5'>Create Organisational Profile</h3>
           <p className='px-5'>Let us get your organisational details in order to set up your profile</p>
           <form>
@@ -41,7 +41,7 @@ const OrgProfile1 = () => {
             </div>
           </form>
         </div>
-        <div className='col-md-6 px-5 border details-list'>
+        <div className='col-md-5 px-5 '>
           <h3>Let us get your organisational details in order to set up your profile in this quick and easy three steps</h3>
           <div className='d-flex mb-2'>
             <div className='bg-primary circle text-white pt-1'>1</div>
