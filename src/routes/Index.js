@@ -24,6 +24,12 @@ import Error404 from '../pages/Error/Error404'
 import ErrorPage from '../pages/Error/ErrorPage'
 import UserDashboard from '../pages/Dashbord/UserDashboard'
 import Wallet from '../pages/Wallet/Wallet'
+import Staff from '../pages/Staff/Staff'
+import Payroll from '../pages/Payroll/Payroll'
+import Settings from '../pages/Settings/Settings'
+import Invoice from '../pages/Invoice/Invoice'
+import BillPayment from '../pages/BillPayment/BillPayment'
+import LoansOverdraft from '../pages/LoansOverdraft/LoansOverdraft'
 
 
 const Index = () => {
@@ -53,6 +59,12 @@ const Index = () => {
         <Route path='/errorpage' element={<ErrorPage/>} />
         <Route path='/user-dashboard' element={<UserDashboard/>} />
         <Route path='/wallet' element={<Wallet/>} />
+        <Route path='/staff' element={<Staff/>} />
+        <Route path='/payroll' element={<Payroll/>} />
+        <Route path='/bill-payment' element={<BillPayment/>} />
+        <Route path='/invoice' element={<Invoice/>} />
+        <Route path='/Loans-and-Overdraft' element={<LoansOverdraft/>} />
+        <Route path='/settings' element={<Settings/>} />
 
     </Routes>
   )
