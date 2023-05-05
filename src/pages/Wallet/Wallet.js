@@ -33,11 +33,11 @@ export const data = {
 const Wallet = () => {
   return (
     <div className="row w-100 ">
-      <div className="col-3 border">
+      <div className="col-2 border">
         <Sidebar />
       </div>
-      <div className="col-9 border">
-        <div className="d-flex container justify-content-end">
+      <div className="col-10 border">
+        <div className="d-flex flex-wrap container justify-content-end">
           <div className=" d-flex ">
             <div className="d-flex mt-3 justify-content-center">
               <BsBell size={25} />
@@ -60,11 +60,12 @@ const Wallet = () => {
           <h3>Wallet</h3>
           <button className="btn btn-primary">Add New Wallet</button>
         </div>
-        <div className="row container justify-content-center mt-2">
-        <div className="d-flex col-9 justify-content-between py-5 rounded-3 bg-light">
-          <div className=" border">
+        
+        <div className="row w-100 border px-xl-3 ms-xl-1 justify-content-center mt-2">
+        <div className="row col-lg-9 container border col-xl-8 me-lg-4 me-xl-5 pt-5 rounded-3 bg-light">
+          <div className=" border col-md-6 col-sm-8 col-12 pb-3">
 
-          <div className=" pry-acct  me-lg-3 me-0  py-3 rounded-4 px-3 linear-background border">
+          <div className=" card me-lg-3 me-0 rounded-4 linear-background ">
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <span className="fs-8 text-white">PRIMARY ACCOUNT</span>
@@ -97,13 +98,37 @@ const Wallet = () => {
               </div>
               </div>
             </div>
+          </div>
+          <div className="border w-100 mt-4">
+            <div className="d-flex justify-content-between">
+              <div>
+              <span className="fs-8">Daily Transaction: N2,000,000</span>
+              </div>
+              <div>
+              <span>Upgrade Limit</span>
+              </div>
+            </div>
+            <div className="progress-bar rounded-4">
+  <div className="progress-fill rounded-4" style={{width: '30%'}}></div>
+</div>
+<div className="d-flex justify-content-between">
+<div className="d-flex">
+<div className="used-2 mt-1"></div>
+<span className="fs-8 ms-1">N100,000</span>
+<span className="fs-8 ms-1">used</span>
+</div>
+<div className="d-flex ">
+<div className="remaining mt-1"></div>
+<span className="fs-8 ms-1">N100,000</span>
+<span className="fs-8 ms-1">remaining</span>
+</div>
+</div>
 
           </div>
-
           </div>
 
-          <div>
-          <div className="col-5 pry-acct py-3 rounded-4 px-3 linear-background-2 border">
+          <div className="border col-md-6 col-sm-8 col-12">
+          <div className="card rounded-4 linear-background-2 border">
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <span className="fs-8 text-white">SUBSCRIPTIONS</span>
@@ -140,7 +165,7 @@ const Wallet = () => {
           <div className="border w-100 mt-4">
             <div className="d-flex justify-content-between">
               <div>
-              <span>Daily Transaction: N2,000,000</span>
+              <span className="fs-8">Daily Transaction: N2,000,000</span>
               </div>
               <div>
               <span>Upgrade Limit</span>
@@ -150,15 +175,15 @@ const Wallet = () => {
   <div className="progress-fill rounded-4" style={{width: '30%'}}></div>
 </div>
 <div className="d-flex justify-content-between">
-<div className="">
-<span className="used-2"></span>
-<span>N100,000</span>
-<span>used</span>
+<div className="d-flex">
+<div className="used-2 mt-1"></div>
+<span className="fs-8 ms-1">N100,000</span>
+<span className="fs-8 ms-1">used</span>
 </div>
-<div className="">
-<span className="remaining"></span>
-<span>N100,000</span>
-<span>remaining</span>
+<div className="d-flex ">
+<div className="remaining mt-1"></div>
+<span className="fs-8 ms-1">N100,000</span>
+<span className="fs-8 ms-1">remaining</span>
 </div>
 </div>
 
@@ -167,12 +192,12 @@ const Wallet = () => {
         </div>
 
 
-          <div className=" row justify-content-center border bg-light col-lg-3 col-5 ms-xl-5 container chart rounded-3">
-            <div className="d-flex flex-column card-body border ">
-              <div>
+          <div className=" row justify-content-center border bg-light col-md-5 col-8 col-lg-3 char rounded-3">
+            <div className="d-flex col-12 justify-content-center flex-column card-body">
+              <div className="text-center py-4">
               <h5 className="card-title fs-8">SUMMARY OF ACCOUNTS</h5>
               </div>
-              <div className="">
+              <div className="d-flex h-50 justify-content-center">
               <Doughnut data={data}/>
               </div>
               <div className="d-flex justify-content-between">

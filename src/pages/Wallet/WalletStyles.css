@@ -16,7 +16,8 @@ a {
     font-weight: 500;
 }
 .pry-acct{
-    width: 300px;
+   /* max-width: 40vh; */
+   min-width: 32vh;
     height: 180px;
 }
 .linear-background{
