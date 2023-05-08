@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsBell } from 'react-icons/bs'
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { MdOutlineKeyboardArrowDown, MdMoreVert } from 'react-icons/md'
 import Sidebar from '../../components/Sidebar'
 
 const Payroll = () => {
@@ -30,8 +30,55 @@ const Payroll = () => {
             </div>
         </div>
             <div className="d-flex container mt-2 justify-content-between">
-                <h3>Staff</h3>
-                <button className="btn btn-primary">Add New Wallet</button>
+                <h3>PAYROLL</h3>
+                <button className="btn fs-8 btn-primary">CREATE NEW PAYROLL</button>
+            </div>
+            <div className='row container mt-3'>
+                <div className='col-lg-4 col-sm-6 col-10 mb-3 d-flex '>
+                    <div className=' d-flex rounded-3 px-3 bg-primary text-white flex-column  border py-4'>
+                      <span className=''>Oct</span>
+                      <span className=''>25</span>
+                    </div>
+                    <div className=' d-flex bg-light justify-content-between'>
+                    <div className=' d-flex flex-column px-3 justify-content-center align-item-center'>
+                      <span className='fs-7 font-weight-600'>Basic Salary</span>
+                      <span className='fs-8'>20 Staff</span>
+                    </div>
+                    <div className=' d-flex mt-3 px-2 justify-content-center align-item-center pt-4'>
+                      <MdMoreVert/>
+                      </div>
+                    </div>
+                </div>
+                <div className='col-lg-4 col-sm-6 col-10 mb-3  d-flex '>
+                    <div className=' d-flex rounded-3 px-3 bg-dark text-white flex-column  border py-4'>
+                      <span className=''>Sep</span>
+                      <span className=''>25</span>
+                    </div>
+                    <div className=' d-flex bg-light justify-content-between'>
+                    <div className=' d-flex flex-column px-3 justify-content-center align-item-center'>
+                      <span className='fs-8 font-weight-600'>Contract Staff</span>
+                      <span className='fs-7'>12 Staff</span>
+                    </div>
+                    <div className=' d-flex mt-3 px-2 justify-content-center align-item-center pt-4'>
+                      <MdMoreVert/>
+                      </div>
+                    </div>
+                </div>
+                <div className='col-lg-4 col-sm-6 col-10 mt-md-0 mt-2 d-flex '>
+                    <div className=' d-flex rounded-3 px-3 bg-warning text-white flex-column  border py-4'>
+                      <span className=''>Oct</span>
+                      <span className=''>20</span>
+                    </div>
+                    <div className=' d-flex bg-light justify-content-between'>
+                    <div className=' d-flex flex-column px-3 justify-content-center align-item-center'>
+                      <span className='fs-7 font-weight-600'>Temporary Staff</span>
+                      <span className='fs-8'>4 Staff</span>
+                    </div>
+                    <div className=' d-flex mt-3 px-2 justify-content-center align-item-center pt-4'>
+                      <MdMoreVert/>
+                      </div>
+                    </div>
+                </div>
             </div>
       </div>
     </div>

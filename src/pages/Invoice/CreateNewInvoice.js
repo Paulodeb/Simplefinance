@@ -120,6 +120,7 @@ const CreateNewInvoice = () => {
                       <option>SELECT CUSTOMER</option>
                       <option>Choose a template</option>
                       <option>Choose a template</option>
+                      <option><button className='btn btn-primary'>Add New Customer</button></option>
                     </select>
                   </div>
                   <div className='col-3'>
@@ -136,6 +137,7 @@ const CreateNewInvoice = () => {
                       <option>Select Account</option>
                       <option>Choose a template</option>
                       <option>Choose a template</option>
+                      
                     </select>
                   </div>
                   <div className='col-3'>
