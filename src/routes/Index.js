@@ -38,6 +38,7 @@ import BulkTransferHistory from '../pages/Wallet/BulkTransferHistory'
 import StatementOfAccount from '../pages/Wallet/StatementOfAccount'
 import Subscriptions from '../pages/Wallet/Subscriptions/Subscriptions'
 import CreateNewInvoice from '../pages/Invoice/CreateNewInvoice'
+import InvoiceDashboard from '../pages/Invoice/InvoiceDashboard'
 
 
 const Index = () => {
@@ -87,10 +88,11 @@ const Index = () => {
         <Route path='/payroll' element={<Payroll/>} />
         <Route path='/bill-payment' element={<BillPayment/>} />
         <Route path='/invoice' element={<Invoice/>} />
+        <Route path='/invoice-dashboard' element={<InvoiceDashboard/>} />
         <Route path='/create-invoice' element={<CreateNewInvoice/>} />
         <Route path='/Loans-and-Overdraft' element={<LoansOverdraft/>} />
         <Route path='/settings' element={<Settings/>} />
-
+        <Route path='*' element={<Error404/>} />
     </Routes>
   )
 }

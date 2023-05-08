@@ -35,7 +35,7 @@ const TransactionLog = () => {
             </div>
             <div className='table-responsive'>
 
-            <table className='table'>
+            <table className='table table-borderless'>
               <thead className='fs-md-7 bg-light'>
                 <tr>
                   <th>Transaction ID</th>
