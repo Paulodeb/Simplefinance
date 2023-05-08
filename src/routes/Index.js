@@ -30,6 +30,14 @@ import Settings from '../pages/Settings/Settings'
 import Invoice from '../pages/Invoice/Invoice'
 import BillPayment from '../pages/BillPayment/BillPayment'
 import LoansOverdraft from '../pages/LoansOverdraft/LoansOverdraft'
+import TransactionLog from '../pages/Wallet/TransactionLog'
+import PrimaryAccount from '../pages/Wallet/PrimaryAccount/PrimaryAccount'
+import WalletAccess from '../pages/Wallet/WalletAccess'
+import ResetWalletPin from '../pages/Wallet/ResetWalletPin'
+import BulkTransferHistory from '../pages/Wallet/BulkTransferHistory'
+import StatementOfAccount from '../pages/Wallet/StatementOfAccount'
+import Subscriptions from '../pages/Wallet/Subscriptions/Subscriptions'
+import CreateNewInvoice from '../pages/Invoice/CreateNewInvoice'
 
 
 const Index = () => {
@@ -58,11 +66,28 @@ const Index = () => {
         <Route path='/error404' element={<Error404/>} />
         <Route path='/errorpage' element={<ErrorPage/>} />
         <Route path='/user-dashboard' element={<UserDashboard/>} />
-        <Route path='/wallet' element={<Wallet/>} />
+        <Route path='/wallet' element={<Wallet/>}>
+          <Route path='/wallet/transaction-log' element={<TransactionLog/>} />
+        </Route>
+          <Route path='/primary-account' element={<PrimaryAccount/>}>
+          <Route path='/primary-account/transaction-log' element={<TransactionLog/>} />
+          <Route path='/primary-account/wallet-access' element={<WalletAccess/>} />
+          <Route path='/primary-account/reset-wallet-pin' element={<ResetWalletPin/>} />
+          <Route path='/primary-account/bulk-transfer-history' element={<BulkTransferHistory/>} />
+          <Route path='/primary-account/statement-of-account' element={<StatementOfAccount/>} />
+          </Route>
+          <Route path='/subscription' element={<Subscriptions/>}>
+          <Route path='/subscription/transaction-log' element={<TransactionLog/>} />
+          <Route path='/subscription/wallet-access' element={<WalletAccess/>} />
+          <Route path='/subscription/reset-wallet-pin' element={<ResetWalletPin/>} />
+          <Route path='/subscription/bulk-transfer-history' element={<BulkTransferHistory/>} />
+          <Route path='/subscription/statement-of-account' element={<StatementOfAccount/>} />
+          </Route>
         <Route path='/staff' element={<Staff/>} />
         <Route path='/payroll' element={<Payroll/>} />
         <Route path='/bill-payment' element={<BillPayment/>} />
         <Route path='/invoice' element={<Invoice/>} />
+        <Route path='/create-invoice' element={<CreateNewInvoice/>} />
         <Route path='/Loans-and-Overdraft' element={<LoansOverdraft/>} />
         <Route path='/settings' element={<Settings/>} />
 

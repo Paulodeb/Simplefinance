@@ -1,15 +1,9 @@
 .org-container{
-<<<<<<< HEAD
-=======
-    /* width: 100%; */
->>>>>>> 0c6b4c067a447064d237ea7decc011f27a5ae78f
+
     height: 100vh;
     width: 100%;
 }
 
-<<<<<<< HEAD
-
-=======
 .org-profile{
     /* width: 100%; */
     /* height: 100vh; */
@@ -36,7 +30,6 @@
     /* align-items: center; */
     align-content: center;
 }
->>>>>>> 0c6b4c067a447064d237ea7decc011f27a5ae78f
 
 .circle{
     width: 30px;

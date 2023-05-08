@@ -1,9 +1,19 @@
-.active{
+.sidebar .active{
     background-color: #3fbcfc;
     height: 100%;
     border-radius: 4px;
     padding: 10px 0px 10px 10px;
   color: #fff;
+}
+
+.table{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.wallet .active{
+    color: #3fbcfc;
+    border-bottom:  2px solid #3fbcfc;
 }
 
 a {
@@ -26,7 +36,61 @@ a {
 }
 .linear-background-2{
     background: linear-gradient(to bottom right, rgba(0, 98, 162, 0.5), rgba(0, 98, 162, 1));
+    
+}
+.primary-account{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
 
+.linear-background-3{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.subscription{
+    background: linear-gradient(to top right, rgba(34, 129, 227, 1), rgba(255, 255, 255, 0));
+}
+
+.linear-background-3:before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -10%;
+    width: 100px;
+    height: 100px;
+    margin-top: -20px;
+    border: 22px solid rgba(34, 129, 227, 0.3);
+    border-radius: 50%;
+    /* clip-path: polygon(100% 0, 0 50%, 100% 100%, 100% 100%); */
+}
+
+.primary-account:before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -10%;
+    width: 100px;
+    height: 100px;
+    margin-top: -20px;
+    border: 22px solid rgba(226, 226, 226, 0.3);
+    border-radius: 50%;
+}
+.curve{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+   
+    color: #3fbcfc;
+    /* margin-bottom: -20px; */
+  
+    /* border-top-left-radius: 50%;
+    border-bottom-left-radius: -50px; */
+    /* border-radius: 70% / 40% */
+    /* clip-path: polygon(100% 0, 0 50%, 100% 100%, 100% 100%); */
 }
 
 .chart{
@@ -76,4 +140,19 @@ a {
 
 .fs-8{
     font-size: 0.85rem;
+}
+
+.success{
+    background-color: rgba(239, 253, 237, 1);
+    color: rgba(54, 211, 28, 1);
+}
+
+.danger{
+    background-color: rgba(254, 235, 235, 1);
+    color: rgba(245, 20, 20, 1);
+}
+
+.warning{
+    background-color: rgba(255, 254, 235, 1);
+    color: rgba(238, 230, 0, 1);
 }

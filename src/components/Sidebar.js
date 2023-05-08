@@ -10,7 +10,7 @@ const Sidebar = () => {
     <div className="">
       <div className="row flex-nowrap">
         <div className="bg-light min-vh-100 d-flex flex-column">
-          <div className="bg-light border p-2">
+          <div className="bg-light border sidebar p-2">
             <NavLink to={'/'} className="row col-auto d-non d-sm-inline col-md-7  mt-1 align-items-center">
 
             <img src={logo} alt="logo" className=" img-fluid w-100" />

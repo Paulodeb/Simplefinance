@@ -1,34 +1,59 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MdCloudUpload, MdDelete } from 'react-icons/md';
 import { AiFillFileImage } from 'react-icons/ai';
 
 const Uploader = () => {
 
-    const [image, setImage] = useState(null);
+    const [file, setFile] = useState(null);
     const [fileName, setFileName] = useState('No selected file');
+    const inputRef = useRef();
+
+    const handeDragover = (e) => {
+        e.preventDefault();
+    }
+
+    const handleDrop = (e) => {
+        e.preventDefault();
+        const file = e.dataTransfer.files[0];
+        setFile(file);
+        setFileName(file.name);
+    }
+
+    if(file) return (
+        <div className='d-flex'>
+            <div className='d-flex flex-column'>
+                {Array.from(file).map((item, index) => <div key={index} className='d-flex align-items-center'>
+                    {file.name.split('.').pop() === 'png' || file.name.split('.').pop() === 'jpg' || file.name.split('.').pop() === 'jpeg' ? <AiFillFileImage className='me-2' /> : <MdCloudUpload className='me-2' />}
+                    <span>{item.name}</span>
+                    <MdDelete className='ms-2' onClick={() => setFile(null)} />
+                </div>)}
+            </div>
+        </div>
+    )
+
   return (
-    <div>
-        <form
-        onClick={()=> document.querySelector(".file-input").click()}
-        >
-            <input type="file" accept='image/*' className='file-input' hidden
-            onChange={({ target : { files } }) => {
-                files[0] && setFileName(files[0].name);
-                if(files){
-                    setImage(URL.createObjectURL(files[0]));
-                }
-            }}
-            />
-            {image ? 
-            <img src={image} width={60} height={60} alt={fileName} />
-            :
-            <>
-            <MdCloudUpload color='#1475cf' size={60}/>
-            <p>Browse File to upload</p>
-            </>
-        }
-        </form>
-    </div>
+    <>
+        {!file && (
+            <div className='d-flex'
+            onDragOver={handeDragover}
+            onDrop={handleDrop}
+            >
+                <MdCloudUpload className='me-2' />
+                <h3>Drag and Drop Files to Upload</h3>
+                <h3>or</h3>
+                <input type='file' 
+                id='file' 
+                className='inputfile'
+                multiple
+                onChange={(e)=>setFile(e.target.files)}
+                hidden 
+                ref={inputRef} />
+                <button 
+                onClick={()=>inputRef.current.click()}
+                className='btn btn-primary'>Select Files</button>
+            </div>
+        )}
+    </>
   )
 }
 

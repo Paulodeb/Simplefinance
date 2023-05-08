@@ -1,17 +1,18 @@
 import React from "react";
-import "./WalletStyles.css";
+import "../WalletStyles.css";
 import { NavLink, Outlet } from "react-router-dom";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../../components/Sidebar";
 import {
   MdOutlineKeyboardArrowDown,
   MdContentCopy,
-  MdMoreVert, 
+  MdMoreVert, MdOutlineCreditCardOff, MdGroups, MdSyncAlt, 
 } from "react-icons/md";
+import Simcard from "../../../assets/simcard.svg";
 import { AiOutlineEye } from "react-icons/ai";
 import { BsBell } from "react-icons/bs";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-
+import Linear from "../../../assets/Vector Linear2.svg"
 import Slider from "react-slick";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -27,13 +28,14 @@ export const data = {
   ],
 };
 
-const Wallet = () => {
+
+const PrimaryAccount = () => {
   return (
     <div className="row w-100 ">
       <div className="col-2 border">
         <Sidebar />
       </div>
-      <div className="col-10 border">
+      <div className="col-10">
         <div className="d-flex flex-wrap container justify-content-end">
           <div className=" d-flex ">
             <div className="d-flex mt-3 justify-content-center">
@@ -96,13 +98,13 @@ const Wallet = () => {
                   </div>
                 </div>
               </div>
-              <div className=" w-100 mt-4">
+              <div className="w-100 mt-4">
                 <div className="d-flex justify-content-between">
                   <div>
                     <span className="fs-8">Daily Transaction: N2,000,000</span>
                   </div>
                   <div>
-                    <span>Upgrade Limit</span>
+                    <span className="fs-8">Upgrade Limit</span>
                   </div>
                 </div>
                 <div className="progress-bar rounded-4">
@@ -112,12 +114,12 @@ const Wallet = () => {
                   ></div>
                 </div>
                 <div className="d-flex flex-wrap justify-content-between">
-                  <div className="d-flex flex-wrap">
+                  <div className="d-flex">
                     <div className="used-2 mt-1"></div>
                     <span className="fs-8 ms-1">N100,000</span>
                     <span className="fs-8 ms-1">used</span>
                   </div>
-                  <div className="d-flex flex-wrap">
+                  <div className="d-flex ">
                     <div className="remaining mt-1"></div>
                     <span className="fs-8 ms-1">N100,000</span>
                     <span className="fs-8 ms-1">remaining</span>
@@ -126,67 +128,57 @@ const Wallet = () => {
               </div>
             </div>
 
-            <div className=" col-md-6 col-sm-8 col-12">
-              <div className="card rounded-4 linear-background-2 ">
+            <div className="col-md-6 col-sm-8 col-12">
+              <div className="card rounded-4 primary-account bg-warning border">
+              <img src={Linear} alt="" className="curve text-white"/>
                 <div className="card-body">
                   <div className="d-flex justify-content-between">
-                    <span className="fs-8 text-white">SUBSCRIPTIONS</span>
+                    <span className="fs-8 text-white"></span>
                     <div className="">
-                      <button className="btn top-up">Top up</button>
+                      <div><img src={Simcard} alt=""/></div>
                     </div>
                   </div>
-                  <div className="d-flex flex-column mt-3 ">
-                    <span className="fs-7 text-white ">Wallet balance</span>
+                  <div className="d-flex flex-column  ">
+                    {/* <span className="fs-7 text-white "></span> */}
                     <div className="d-flex justify-content-between">
                       <h5 className="card-title text-white">
-                        NGN 20,000,000.00
+                        **** **** **** 1234
                       </h5>
-                      <div>
-                        <AiOutlineEye color="#fff" />
-                      </div>
                     </div>
                   </div>
-                  <div className="d-flex mt-3 flex-column">
-                    <span className="fs-7 text-white">Providus Bank</span>
+                  <div className="d-flex mt-2 flex-column">
+                    <span className="fs-7 text-white">Primary Account</span>
                     <div className="d-flex justify-content-between">
                       <div className="d-flex align-items-center">
-                        <span className="fs-7 text-white">0119968330</span>
-                        <div className="ms-1">
-                          <MdContentCopy color="#fff" />
-                        </div>
+                      <div className="d-flex flex-column">
+                        <div className="fs-7 text-white">Valid</div>
+                      <div className="fs-7 text-white">Till</div>
                       </div>
-                      <div>
-                        <MdMoreVert color="#fff" />
+                      <div className="ms-1">
+                        <span className="fs-7 text-white">05/22</span>
+                      </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-100 mt-4">
-                <div className="d-flex justify-content-between">
-                  <div>
-                    <span className="fs-8">Daily Transaction: N2,000,000</span>
+              <div className="w-100 mt-3">
+               
+                <div className="d-flex justify-content-center align-items-center ">
+                  <div className="d-flex me-3 align-items-center flex-column">
+                    <div className="circle text-white bg-primary"><MdSyncAlt/></div>
+                    <span className="fs-8 py-2">Bank Transfer</span>
+                   
                   </div>
-                  <div>
-                    <span>Upgrade Limit</span>
+                  <div className="d-flex align-items-center flex-column">
+                    <div className=" circle bg-warning text-white"><MdGroups/></div>
+                    <span className="fs-8 py-2">Bulk Transfer</span>
+                    
                   </div>
-                </div>
-                <div className="progress-bar rounded-4">
-                  <div
-                    className="progress-fill rounded-4"
-                    style={{ width: "30%" }}
-                  ></div>
-                </div>
-                <div className="d-flex flex-wrap justify-content-between">
-                  <div className="d-flex flex-wrap">
-                    <div className="used-2 mt-1"></div>
-                    <span className="fs-8 ms-1">N100,000</span>
-                    <span className="fs-8 ms-1">used</span>
-                  </div>
-                  <div className="d-flex flex-wrap">
-                    <div className="remaining mt-1"></div>
-                    <span className="fs-8 ms-1">N100,000</span>
-                    <span className="fs-8 ms-1">remaining</span>
+                  <div className="d-flex ms-3 align-items-center flex-column">
+                    <div className="circle bg-dark text-white"><MdOutlineCreditCardOff/></div>
+                    <span className="fs-8 py-2 ">Disable Card</span>
+                    
                   </div>
                 </div>
               </div>
@@ -218,18 +210,32 @@ const Wallet = () => {
             </div>
           </div>
         </div>
-        <div className="mt-4 wallet">
-          <h3 className="mb-3">ACCOUNTS</h3>
-          <NavLink className='text-decoration-none pb-2 border-bottom' to='/wallet/transaction-log'>
-          Recent Transaction Log
+        <div className="mt-4 container">
+          <h3 className="mb-3">PRIMARY ACCOUNTS</h3>
+          <div className="d-flex flex-wrap  wallet">
+          <NavLink className='text-decoration-none border-bottom pb-2 pe-3' to='/primary-account/transaction-log'>
+          Recent Transaction Log 
           </NavLink>
+          <NavLink className='text-decoration-none border-bottom pe-3' to='/primary-account/wallet-access'>
+          Wallet Access
+          </NavLink>
+          <NavLink className='text-decoration-none border-bottom pe-3' to='/primary-account/reset-wallet-pin'>
+         Reset Wallet Pin
+          </NavLink>
+          <NavLink className='text-decoration-none border-bottom pe-3' to='/primary-account/bulk-transfer-history'>
+          Bulk Transfer History
+          </NavLink>
+          <NavLink className='text-decoration-none border-bottom ' to='/primary-account/statement-of-account'>
+          Statement Of Account
+          </NavLink>
+          </div>
         </div>
         <div className="mt-3">
           <Outlet/>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Wallet;
+export default PrimaryAccount
