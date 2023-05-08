@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg'
 import './OrgProfileStyles.css'
+import Uploader from '../../components/Uploader';
 
 const OrgProfile2 = () => {
    const navigate = useNavigate();
@@ -22,7 +23,7 @@ const OrgProfile2 = () => {
             <div className='form-group px-3 px-md-3 px-lg-5 px-sm-5'>
             <label>Logo</label>
               <div className='border mb-2'>
-              <input type="file" accept='image/*' className='file-input' />
+              <Uploader/>
               </div> 
               <label htmlFor='comSize'>Company Size</label>
               <input type='' className='form-control mb-2' id='comSize' placeholder='Select company size' />

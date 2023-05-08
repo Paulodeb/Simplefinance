@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsBell } from 'react-icons/bs'
-import { MdMale, MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { MdCopyAll, MdMale, MdOutlineContentCopy, MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import Sidebar from '../../components/Sidebar'
 
 const InvoiceDashboard = () => {
@@ -34,16 +34,11 @@ const InvoiceDashboard = () => {
                 <button className="btn btn-primary">Edit Invoice</button>
             </div>
             <div className='row'>
-                <div className='col-8'>
-                    <div className='container border py-4 mt-5'>
-                        
-                        <div className='d-flex justify-content-between'>
-                        </div>
-                        <div className='d-flex justify-content-between'></div>
-                    </div>
+                <div className='col-8 h-100vh mt-3 border'>
+                  
                 </div>
                 <div className='col-4'>
-                    <div className='container border py-4 mt-5'>
+                    <div className='container border py-4 mt-3'>
                         <div className='d-flex flex-column'>
                             <form>
                                 <label>Payment Status</label>
@@ -58,10 +53,23 @@ const InvoiceDashboard = () => {
                                 </div>
                             </form>
                             <div>
-                                <div className='tex-center'>
-                                    <span>Congratulations</span>
-                                    <p>You invoice have receipt payment</p>
-                                    
+                                <div className='d-flex mt-4 justify-content-center flex-column'>
+                                    <span className='text-center w-100'>Congratulations</span>
+                                    <p className='text-center'>Your invoice have receipt payment</p>
+                                    <button className='btn btn-primary bg-success'>Send Receipt</button>
+                                </div>
+
+                                <div className='d-flex mt-4 justify-content-center flex-column'>
+                                  <form>
+                                    <label>Copy invoice Link</label>
+                                    <div className='d-flex'>
+                                    <input type='text' className='form-control' placeholder='simplefinance.com' />
+                                    <div className='p-3 btn'>
+                                    <MdOutlineContentCopy color="white" size={20} />
+                                    </div>
+                                    </div>
+                                    <button className='btn btn-primary mt-3'>Preview invoice as Customer</button>
+                                  </form>
                                 </div>
                             </div>
                         </div>

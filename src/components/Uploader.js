@@ -23,7 +23,7 @@ const Uploader = () => {
         <div className='d-flex'>
             <div className='d-flex flex-column'>
                 {Array.from(file).map((item, index) => <div key={index} className='d-flex align-items-center'>
-                    {file.name.split('.').pop() === 'png' || file.name.split('.').pop() === 'jpg' || file.name.split('.').pop() === 'jpeg' ? <AiFillFileImage className='me-2' /> : <MdCloudUpload className='me-2' />}
+                    {/* {file.name.split('.').pop() === 'png' || file.name.split('.').pop() === 'jpg' || file.name.split('.').pop() === 'jpeg' ? <AiFillFileImage className='me-2' /> : <MdCloudUpload className='me-2' />} */}
                     <span>{item.name}</span>
                     <MdDelete className='ms-2' onClick={() => setFile(null)} />
                 </div>)}
@@ -34,13 +34,12 @@ const Uploader = () => {
   return (
     <>
         {!file && (
-            <div className='d-flex'
+            <div className='d-flex justify-content-center align-items-center border h-100 w-100'
             onDragOver={handeDragover}
             onDrop={handleDrop}
             >
-                <MdCloudUpload className='me-2' />
-                <h3>Drag and Drop Files to Upload</h3>
-                <h3>or</h3>
+                <MdCloudUpload color='' className='ms-2 me-2' />
+                <h3 className='fs-8 me-2'>Drag and Drop Files to Upload or</h3>
                 <input type='file' 
                 id='file' 
                 className='inputfile'
