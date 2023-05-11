@@ -1,18 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsBell } from 'react-icons/bs'
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import Sidebar from '../../components/Sidebar'
 import { FaRegCalendarAlt } from 'react-icons/fa'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import './InvoiceStyles.css'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.snow.css'
+
+
+
 
 const CreateNewInvoice = () => {
+  const [body, setBody] = useState('')
+
+  const handleBody = (e) => {
+    console.log(e)
+    setBody(e)
+  }
+
   return (
     <div className='row w-100'>
     <div className='col-3'>
     <Sidebar/>
     </div>
-      <div className='col-9'>
+      <div className='col-9 container'>
         <div className='d-flex container justify-content-end'>
           <div className='d-flex'>
             <div className="d-flex mt-3 justify-content-center">
@@ -61,8 +73,9 @@ const CreateNewInvoice = () => {
                 </div>
                 </div>
                 </div>
-                <div classNaame='table-responsive'>
-                <table className='table table-borderless mt-5'>
+                <div className='row border'>
+                <div classNaame='col-12 table-respons'>
+                <table className='table table-borderle mt-5'>
                     <thead>
                         <tr>
                             <th>N/A</th>
@@ -76,27 +89,28 @@ const CreateNewInvoice = () => {
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
+                            <td><input type='text' className='' placeholder=''/></td>
+                            <td><input type='text' className='' placeholder=''/></td>
+                            <td><input type='text' className='w-50' placeholder=''/></td>
+                            <td><input type='text' className='w-50' placeholder=''/></td>
+                            <td><input type='text' className='' placeholder=''/></td>
                             <td><button className='btn btn-primary'><RiDeleteBin6Line/></button></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
-                            <td><input type='text' className='form-control' placeholder=''/></td>
+                            <td><input type='text' className='' placeholder=''/></td>
+                            <td><input type='text' className='' placeholder=''/></td>
+                            <td><input type='text' className=' w-50' placeholder=''/></td>
+                            <td><input type='text' className=' w-50' placeholder=''/></td>
+                            <td><input type='text' className='' placeholder=''/></td>
                             <td><button className='btn btn-primary'><RiDeleteBin6Line/></button></td>
                         </tr>
                     </tbody>
                 </table>
                 </div>
+                </div>
                 <div className='row border py-5 justify-content-end mt-5'>
-                    <div className='col-6 d-flex flex-column'>
+                    <div className='col-12 col-md-7 col-lg-6 d-flex flex-column'>
 
                     <div className=' border-bottom justify-content-between d-flex '>
                       <span className='px-2'>Sub Total</span>
@@ -114,7 +128,7 @@ const CreateNewInvoice = () => {
                 </div>
                 <div className='d-flex flex-column'>
                   <form className='row'>
-                  <div className='col-3'>
+                  <div className='col-12 col-sm-3'>
                     <label className='mt-2  fs-6'>Select Customer</label>
                     <select className='form-select mt-3'>
                       <option>SELECT CUSTOMER</option>
@@ -123,7 +137,7 @@ const CreateNewInvoice = () => {
                       <option><button className='btn btn-primary'>Add New Customer</button></option>
                     </select>
                   </div>
-                  <div className='col-3'>
+                  <div className='col-12 col-sm-3'>
                     <label className='mt-2  fs-6'>Tax No.</label>
                     <select className='form-select mt-3'>
                       <option>INVOICE SUBJECT</option>
@@ -131,7 +145,7 @@ const CreateNewInvoice = () => {
                       <option>Choose a template</option>
                     </select>
                   </div>
-                  <div className='col-3'>
+                  <div className='col-12 col-sm-3'>
                     <label className='mt-2  fs-6'>Payment Account</label>
                     <select className='form-select mt-3'>
                       <option>Select Account</option>
@@ -140,7 +154,7 @@ const CreateNewInvoice = () => {
                       
                     </select>
                   </div>
-                  <div className='col-3'>
+                  <div className='col-12 col-sm-3'>
                     <label className='mt-2  fs-6'>Currency</label>
                     <select className='form-select mt-3'>
                       <option>Nigeria Naira NGN</option>
@@ -151,7 +165,13 @@ const CreateNewInvoice = () => {
                 <div className='d-flex flex-column'>
                 <label className='mt-2  fs-6'>Invoice Note</label>
                   <div className='col-12'>
-                    <textarea className='form-control mt-3' placeholder='Add a note to your customer (optional)'/>
+                    <ReactQuill className='mt-3' theme="snow"
+                    placeholder='Add a note to your customer (optional)'
+                    modules={CreateNewInvoice.modules}
+                    formats={CreateNewInvoice.formats}
+                    onChange={handleBody}
+                    value={body}
+                    />
                   </div>
                 </div>
                 <div className='row'>
@@ -167,3 +187,34 @@ const CreateNewInvoice = () => {
 }
 
 export default CreateNewInvoice
+
+
+CreateNewInvoice.modules = {
+  toolbar: [
+    [{header: '1'}, {header: '2'}, { header: [3, 4, 5, 6] }, { font: [] }],
+    [{size: []}],
+    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+    [{list: 'ordered'}, {list: 'bullet'}, { indent: '-1' }, { indent: '+1' }],
+    ['link', 'image', 'video'],
+    ['clean']
+    ['code-block']
+  ],
+};
+
+CreateNewInvoice.formats = [
+  'header',
+  'font',
+  'size',
+  'bold',
+  'italic',
+  'underline',
+  'strike',
+  'blockquote',
+  'list',
+  'bullet',
+  'indent',
+  'link',
+  'image',
+  'video',
+  'code-block'
+];

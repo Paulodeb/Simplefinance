@@ -1,18 +1,9 @@
-import React from "react";
-import "./WalletStyles.css";
-import { NavLink, Outlet } from "react-router-dom";
-import Sidebar from "../../components/Sidebar";
-import {
-  MdOutlineKeyboardArrowDown,
-  MdContentCopy,
-  MdMoreVert, 
-} from "react-icons/md";
-import { AiOutlineEye } from "react-icons/ai";
-import { BsBell } from "react-icons/bs";
+import React from 'react'
+import { AiOutlineEye } from 'react-icons/ai'
+import { MdContentCopy, MdMoreVert } from 'react-icons/md'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-
-import Slider from "react-slick";
+import { NavLink, Outlet } from 'react-router-dom';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -27,38 +18,11 @@ export const data = {
   ],
 };
 
+
 const Wallet = () => {
   return (
-    <div className="row w-100 ">
-      <div className="col-2 border">
-        <Sidebar />
-      </div>
-      <div className="col-10 border">
-        <div className="d-flex flex-wrap container justify-content-end">
-          <div className=" d-flex ">
-            <div className="d-flex mt-3 justify-content-center">
-              <BsBell size={25} />
-            </div>
-            <img
-              src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM="
-              alt="profile"
-              className="img-fluid mt-2 me-1 cover"
-            />
-            <div className="w-100  mt-2 d-flex flex-column">
-              <span className="">Emmanuel Adebayo</span>
-              <span className="email-text">emmanuel@mail.com</span>
-            </div>
-            <div className="mt-2">
-              <MdOutlineKeyboardArrowDown color="" size={30} />
-            </div>
-          </div>
-        </div>
-        <div className="d-flex container mt-2 justify-content-between">
-          <h3>Wallet</h3>
-          <button className="btn btn-primary">Add New Wallet</button>
-        </div>
-
-        <div className="row w-100 px-xl-3 ms-xl-1 justify-content-center mt-2">
+    <div>
+         <div className="row w-100 px-xl-3 ms-xl-1 justify-content-center mt-2">
           <div className="row col-lg-9 container border col-xl-8 me-lg-4 me-xl-5 pt-5 rounded-3 bg-light">
             <div className="col-md-6 col-sm-8 col-12 pb-3">
               <div className=" card me-lg-3 me-0 rounded-4 linear-background ">
@@ -220,16 +184,15 @@ const Wallet = () => {
         </div>
         <div className="mt-4 wallet">
           <h3 className="mb-3">ACCOUNTS</h3>
-          <NavLink className='text-decoration-none pb-2 border-bottom' to='/wallet/transaction-log'>
+          <NavLink className='text-decoration-none pb-2 border-bottom' to='/wallet/account/transaction-log'>
           Recent Transaction Log
           </NavLink>
         </div>
         <div className="mt-3">
           <Outlet/>
         </div>
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Wallet;
+export default Wallet

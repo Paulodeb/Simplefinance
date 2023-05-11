@@ -22,8 +22,29 @@
 .font-weight-900{
     font-weight: 900;
 }
-/* 
+
 .table{
     width: 100%;
     overflow-x: scroll;
-} */
+}
+
+
+  
+  .dropdown-content {
+    position: absolute;
+    right: 0;
+
+    top: 5%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    z-index: 1;
+  }
+
+  .ql-editor{
+    min-height: 200px;
+  }
+  
+ 

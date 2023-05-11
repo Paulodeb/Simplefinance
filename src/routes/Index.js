@@ -23,7 +23,7 @@ import OrgVerification from '../pages/OrganisationSetup/OrgVerification'
 import Error404 from '../pages/Error/Error404'
 import ErrorPage from '../pages/Error/ErrorPage'
 import UserDashboard from '../pages/Dashbord/UserDashboard'
-import Wallet from '../pages/Wallet/Wallet'
+import IndexWallet from '../pages/Wallet/IndexWallet'
 import Staff from '../pages/Staff/Staff'
 import Payroll from '../pages/Payroll/Payroll'
 import Settings from '../pages/Settings/Settings'
@@ -39,6 +39,7 @@ import StatementOfAccount from '../pages/Wallet/StatementOfAccount'
 import Subscriptions from '../pages/Wallet/Subscriptions/Subscriptions'
 import CreateNewInvoice from '../pages/Invoice/CreateNewInvoice'
 import InvoiceDashboard from '../pages/Invoice/InvoiceDashboard'
+import Wallet from '../pages/Wallet/Outlet/Wallet'
 
 
 const Index = () => {
@@ -67,23 +68,25 @@ const Index = () => {
         <Route path='/error404' element={<Error404/>} />
         <Route path='/errorpage' element={<ErrorPage/>} />
         <Route path='/user-dashboard' element={<UserDashboard/>} />
-        <Route path='/wallet' element={<Wallet/>}>
-          <Route path='/wallet/transaction-log' element={<TransactionLog/>} />
+        <Route path='/wallet' element={<IndexWallet/>}>
+          <Route path='/wallet/account' element={<Wallet/>} >
+            <Route path='/wallet/account/transaction-log' element={<TransactionLog/>} />
+            </Route>
+          <Route path='/wallet/primary-account' element={<PrimaryAccount/>}>
+          <Route path='/wallet/primary-account/transaction-log' element={<TransactionLog/>} />
+          <Route path='/wallet/primary-account/wallet-access' element={<WalletAccess/>} />
+          <Route path='/wallet/primary-account/reset-wallet-pin' element={<ResetWalletPin/>} />
+          <Route path='/wallet/primary-account/bulk-transfer-history' element={<BulkTransferHistory/>} />
+          <Route path='/wallet/primary-account/statement-of-account' element={<StatementOfAccount/>} />
+          </Route>
+          <Route path='/wallet/subscription' element={<Subscriptions/>}>
+          <Route path='wallet/subscription/transaction-log' element={<TransactionLog/>} />
+          <Route path='/wallet/subscription/wallet-access' element={<WalletAccess/>} />
+          <Route path='/wallet/subscription/reset-wallet-pin' element={<ResetWalletPin/>} />
+          <Route path='/wallet/subscription/bulk-transfer-history' element={<BulkTransferHistory/>} />
+          <Route path='/wallet/subscription/statement-of-account' element={<StatementOfAccount/>} />
+          </Route>
         </Route>
-          <Route path='/primary-account' element={<PrimaryAccount/>}>
-          <Route path='/primary-account/transaction-log' element={<TransactionLog/>} />
-          <Route path='/primary-account/wallet-access' element={<WalletAccess/>} />
-          <Route path='/primary-account/reset-wallet-pin' element={<ResetWalletPin/>} />
-          <Route path='/primary-account/bulk-transfer-history' element={<BulkTransferHistory/>} />
-          <Route path='/primary-account/statement-of-account' element={<StatementOfAccount/>} />
-          </Route>
-          <Route path='/subscription' element={<Subscriptions/>}>
-          <Route path='/subscription/transaction-log' element={<TransactionLog/>} />
-          <Route path='/subscription/wallet-access' element={<WalletAccess/>} />
-          <Route path='/subscription/reset-wallet-pin' element={<ResetWalletPin/>} />
-          <Route path='/subscription/bulk-transfer-history' element={<BulkTransferHistory/>} />
-          <Route path='/subscription/statement-of-account' element={<StatementOfAccount/>} />
-          </Route>
         <Route path='/staff' element={<Staff/>} />
         <Route path='/payroll' element={<Payroll/>} />
         <Route path='/bill-payment' element={<BillPayment/>} />

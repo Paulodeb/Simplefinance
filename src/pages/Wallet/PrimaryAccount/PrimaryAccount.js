@@ -31,35 +31,9 @@ export const data = {
 
 const PrimaryAccount = () => {
   return (
-    <div className="row w-100 ">
-      <div className="col-2 border">
-        <Sidebar />
-      </div>
-      <div className="col-10">
-        <div className="d-flex flex-wrap container justify-content-end">
-          <div className=" d-flex ">
-            <div className="d-flex mt-3 justify-content-center">
-              <BsBell size={25} />
-            </div>
-            <img
-              src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM="
-              alt="profile"
-              className="img-fluid mt-2 me-1 cover"
-            />
-            <div className="w-100  mt-2 d-flex flex-column">
-              <span className="">Emmanuel Adebayo</span>
-              <span className="email-text">emmanuel@mail.com</span>
-            </div>
-            <div className="mt-2">
-              <MdOutlineKeyboardArrowDown color="" size={30} />
-            </div>
-          </div>
-        </div>
-        <div className="d-flex container mt-2 justify-content-between">
-          <h3>Wallet</h3>
-          <button className="btn btn-primary">Add New Wallet</button>
-        </div>
-
+    <div className="row container w-100 ">
+      <div className="col">
+   
         <div className="row w-100 px-xl-3 ms-xl-1 justify-content-center mt-2">
           <div className="row col-lg-9 container border col-xl-8 me-lg-4 me-xl-5 pt-5 rounded-3 bg-light">
             <div className="col-md-6 col-sm-8 col-12 pb-3">
@@ -213,19 +187,19 @@ const PrimaryAccount = () => {
         <div className="mt-4 container">
           <h3 className="mb-3">PRIMARY ACCOUNTS</h3>
           <div className="d-flex flex-wrap  wallet">
-          <NavLink className='text-decoration-none border-bottom pb-2 pe-3' to='/primary-account/transaction-log'>
+          <NavLink className='text-decoration-none border-bottom pb-2 pe-3' to='/wallet/primary-account/transaction-log'>
           Recent Transaction Log 
           </NavLink>
-          <NavLink className='text-decoration-none border-bottom pe-3' to='/primary-account/wallet-access'>
+          <NavLink className='text-decoration-none border-bottom pe-3' to='/wallet/primary-account/wallet-access'>
           Wallet Access
           </NavLink>
-          <NavLink className='text-decoration-none border-bottom pe-3' to='/primary-account/reset-wallet-pin'>
+          <NavLink className='text-decoration-none border-bottom pe-3' to='/wallet/primary-account/reset-wallet-pin'>
          Reset Wallet Pin
           </NavLink>
-          <NavLink className='text-decoration-none border-bottom pe-3' to='/primary-account/bulk-transfer-history'>
+          <NavLink className='text-decoration-none border-bottom pe-3' to='/wallet/primary-account/bulk-transfer-history'>
           Bulk Transfer History
           </NavLink>
-          <NavLink className='text-decoration-none border-bottom ' to='/primary-account/statement-of-account'>
+          <NavLink className='text-decoration-none border-bottom ' to='/wallet/primary-account/statement-of-account'>
           Statement Of Account
           </NavLink>
           </div>

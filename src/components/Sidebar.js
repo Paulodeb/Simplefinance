@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { MdOutlineAccountBalanceWallet, MdOutlinePayments, MdPayment, MdOutlineSavings, MdOutlineLogout } from "react-icons/md";
 import { IoPeopleOutline, IoSettingsOutline, IoReceiptOutline } from "react-icons/io5";
 import logo from "../assets/logo.svg";
 
 
 const Sidebar = () => {
+  const navigate = useNavigate('/wallet/account');
   return (
     <div className="">
       <div className="row flex-nowrap">
@@ -17,8 +18,11 @@ const Sidebar = () => {
 
             </NavLink>
             <ul className="nav nav-pills flex-column mt-4">
-              <li className="nav-item py-2 py-sm-2">
-                <NavLink to={'/wallet'} className="nav-lin text-decoration-none d-flex">
+              <li className="nav-item py-2 py-sm-2"
+              
+              >
+                <NavLink to={'/wallet/account'} activeClassName={'active'} 
+                className="nav-lin text-decoration-none d-flex">
                   <div><MdOutlineAccountBalanceWallet/></div> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Wallet</span>
                 </NavLink>

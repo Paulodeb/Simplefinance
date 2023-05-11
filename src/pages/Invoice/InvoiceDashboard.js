@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsBell } from 'react-icons/bs'
 import { MdCopyAll, MdMale, MdOutlineContentCopy, MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import Sidebar from '../../components/Sidebar'
+import './InvoiceStyles.css'
 
 const InvoiceDashboard = () => {
+  const [show, setShow] = useState(false)
   return (
     <div className='row w-100'>
     <div className='col-3'>
@@ -15,6 +17,8 @@ const InvoiceDashboard = () => {
             <div className="d-flex mt-3 justify-content-center">
                <BsBell size={25}/>
              </div>
+             <div className='d-flex'>
+
              <img
                    src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM="
                    alt="profile"
@@ -24,11 +28,23 @@ const InvoiceDashboard = () => {
                    <span className="">Emmanuel Adebayo</span>
                    <span className="email-text">emmanuel@mail.com</span>
                  </div>
-                 <div className="mt-2">
+                 <div className="mt-2" onClick={() =>{
+                    setShow(!show)
+                 }}>
                    <MdOutlineKeyboardArrowDown color="" size={30} />
                  </div>
+                </div>
+                {show && (
+                <div className='d-flex dropdown-content flex-column'>
+                  <span>Link 1</span>
+                  <span>Link 2</span>
+                  <span>Link 3</span>
+                  <span>Link 4</span>
+                </div>
+              )}
             </div>
         </div>
+        
             <div className="d-flex container mt-2 justify-content-between">
                 <h3>INV-00000001</h3>
                 <button className="btn btn-primary">Edit Invoice</button>
