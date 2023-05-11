@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BsBell } from 'react-icons/bs'
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { MdDelete, MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import Sidebar from '../../components/Sidebar'
 import { FaRegCalendarAlt } from 'react-icons/fa'
 import { RiDeleteBin6Line } from 'react-icons/ri'
@@ -73,42 +73,41 @@ const CreateNewInvoice = () => {
                 </div>
                 </div>
                 </div>
-                <div className='row border'>
-                <div classNaame='col-12 table-respons'>
-                <table className='table table-borderle mt-5'>
-                    <thead>
-                        <tr>
-                            <th>N/A</th>
-                            <th>Item</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th>Discount</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><input type='text' className='' placeholder=''/></td>
-                            <td><input type='text' className='' placeholder=''/></td>
-                            <td><input type='text' className='w-50' placeholder=''/></td>
-                            <td><input type='text' className='w-50' placeholder=''/></td>
-                            <td><input type='text' className='' placeholder=''/></td>
-                            <td><button className='btn btn-primary'><RiDeleteBin6Line/></button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><input type='text' className='' placeholder=''/></td>
-                            <td><input type='text' className='' placeholder=''/></td>
-                            <td><input type='text' className=' w-50' placeholder=''/></td>
-                            <td><input type='text' className=' w-50' placeholder=''/></td>
-                            <td><input type='text' className='' placeholder=''/></td>
-                            <td><button className='btn btn-primary'><RiDeleteBin6Line/></button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-                </div>
+                <div className='table-responsive'>
+
+<table className='table table-borderless'>
+  <thead className='fs-md-7 bg-light'>
+    <tr>
+      <th>N/A</th>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Unit Price</th>
+      <th>Discount</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><MdDelete/></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><input/></td>
+      <td><MdDelete/></td>
+    </tr>
+  </tbody>
+</table>
+</div>
                 <div className='row border py-5 justify-content-end mt-5'>
                     <div className='col-12 col-md-7 col-lg-6 d-flex flex-column'>
 
