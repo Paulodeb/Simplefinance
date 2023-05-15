@@ -21,29 +21,7 @@ const CreateNewInvoice = () => {
 
   return (
     <div className='row w-100'>
-    <div className='col-3'>
-    <Sidebar/>
-    </div>
-      <div className='col-9 container'>
-        <div className='d-flex container justify-content-end'>
-          <div className='d-flex'>
-            <div className="d-flex mt-3 justify-content-center">
-               <BsBell size={25}/>
-             </div>
-             <img
-                   src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM="
-                   alt="profile"
-                   className="img-fluid mt-2 me-1 cover"
-                 />
-                  <div className="w-100  mt-2 d-flex flex-column">
-                   <span className="">Emmanuel Adebayo</span>
-                   <span className="email-text">emmanuel@mail.com</span>
-                 </div>
-                 <div className="mt-2">
-                   <MdOutlineKeyboardArrowDown color="" size={30} />
-                 </div>
-            </div>
-        </div>
+      <div className='col-12 container'>
             <div className="d-flex container mt-2 justify-content-between">
                 <h3>New Invoice</h3>
                 <button className='btn btn-primary'>Add New Customer</button>
@@ -133,7 +111,7 @@ const CreateNewInvoice = () => {
                       <option>SELECT CUSTOMER</option>
                       <option>Choose a template</option>
                       <option>Choose a template</option>
-                      <option><button className='btn btn-primary'>Add New Customer</button></option>
+                      <option>Add New Customer</option>
                     </select>
                   </div>
                   <div className='col-12 col-sm-3'>

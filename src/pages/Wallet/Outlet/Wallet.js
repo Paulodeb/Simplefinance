@@ -21,7 +21,7 @@ export const data = {
 
 const Wallet = () => {
   return (
-    <div>
+    <div className='container'>
          <div className="row w-100 px-xl-3 ms-xl-1 justify-content-center mt-2">
           <div className="row col-lg-9 container border col-xl-8 me-lg-4 me-xl-5 pt-5 rounded-3 bg-light">
             <div className="col-md-6 col-sm-8 col-12 pb-3">

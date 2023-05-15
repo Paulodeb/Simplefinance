@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg'
 import './OrgProfileStyles.css'
@@ -25,9 +24,9 @@ const OrgProfile2 = () => {
               <div className='border mb-2'>
               <Uploader/>
               </div> 
-              <label htmlFor='comSize'>Company Size</label>
+              <label>Company Size</label>
               <input type='' className='form-control mb-2' id='comSize' placeholder='Select company size' />
-              <label htmlFor='Type'>Type</label>
+              <label>Type</label>
               <input type='' className='form-control mb-4' id='type' placeholder='Select organisation type' />
               <button 
               onClick={(e) => {

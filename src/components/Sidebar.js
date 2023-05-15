@@ -1,14 +1,13 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { MdOutlineAccountBalanceWallet, MdOutlinePayments, MdPayment, MdOutlineSavings, MdOutlineLogout } from "react-icons/md";
 import { IoPeopleOutline, IoSettingsOutline, IoReceiptOutline } from "react-icons/io5";
 import logo from "../assets/logo.svg";
 
 
 const Sidebar = () => {
-  const navigate = useNavigate('/wallet/account');
   return (
-    <div className="">
+    <div className="container">
       <div className="row flex-nowrap">
         <div className="bg-light min-vh-100 d-flex flex-column">
           <div className="bg-light border sidebar p-2">
@@ -17,63 +16,63 @@ const Sidebar = () => {
             <img src={logo} alt="logo" className=" img-fluid w-100" />
 
             </NavLink>
-            <ul className="nav nav-pills flex-column mt-4">
-              <li className="nav-item py-2 py-sm-2"
+            <div className="nav nav-pills flex-column mt-4">
+              <div className="nav-item py-2 py-sm-2"
               
               >
-                <NavLink to={'/wallet/account'} activeClassName={'active'} 
-                className="nav-lin text-decoration-none d-flex">
-                  <div><MdOutlineAccountBalanceWallet/></div> 
+                <NavLink to={'/wallet'}
+                className=" text-decoration-none d-flex">
+                  <span><MdOutlineAccountBalanceWallet/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Wallet</span>
                 </NavLink>
-              </li>
-              <li className="nav-item py-2 py-sm-2">
-              <NavLink to={'/staff'} className=" text-decoration-none d-flex">
-                  <div><IoPeopleOutline/></div> 
+              </div>
+              <div className="nav-item py-2 py-sm-2">
+              <NavLink to={'/staff'}  className=" text-decoration-none d-flex">
+                  <span><IoPeopleOutline/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Staff</span>
                 </NavLink>             
-                 </li>
-              <li className="nav-item py-2 py-sm-2">
-              <NavLink to={'/payroll'} className=" text-decoration-none d-flex">
-                  <div><MdOutlinePayments/></div> 
+                 </div>
+              <div className="nav-item py-2 py-sm-2">
+              <NavLink to={'/payroll'}  className=" text-decoration-none d-flex">
+                  <span><MdOutlinePayments/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Payroll</span>
                 </NavLink>
-              </li>
-              <li className="nav-item py-2 py-sm-2">
+              </div>
+              <div className="nav-item py-2 py-sm-2">
               <NavLink to={'/bill-payment'} className="text-decoration-none d-flex">
-                  <div><MdPayment/></div> 
+                  <span><MdPayment/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Bill Payment</span>
                 </NavLink>
-              </li>
-              <li className="nav-item py-2 py-sm-2">
-              <NavLink to={'/invoice'} className="text-decoration-none d-flex">
-                  <div><IoReceiptOutline/></div> 
+              </div>
+              <div className="nav-item py-2 py-sm-2">
+              <NavLink to={'/invoice'}  className="text-decoration-none d-flex">
+                  <span><IoReceiptOutline/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Invoice</span>
                 </NavLink>
-              </li>
-              <li className="nav-item py-2 py-sm-2">
+              </div>
+              <div className="nav-item py-2 py-sm-2">
               <NavLink to={'/Loans-and-Overdraft'} className="text-decoration-none d-flex">
-                  <div><MdOutlineSavings/></div> 
+                  <span><MdOutlineSavings/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Loans and Overdraft</span>
                 </NavLink>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
             <div className="ps-2">
-            <ul className="nav nav-pills flex-column mt-4">
-            <li className="nav-item py-2 py-sm-2">
+            <div className="nav nav-pills flex-column mt-4">
+            <div className="nav-item py-2 py-sm-2">
                 <NavLink to={'/settings'} className="text-decoration-none d-flex">
-                  <div><IoSettingsOutline/></div> 
+                  <span><IoSettingsOutline/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Settings</span>
                 </NavLink>
-              </li>
-              <li className="nav-item py-2 py-sm-2">
-              <div className=" text-decoration-none d-flex">
-                  <div><MdOutlineLogout/></div> 
+              </div>
+              <div className="nav-item py-2 py-sm-2">
+              <NavLink className=" text-decoration-none d-flex">
+                  <span><MdOutlineLogout/></span> 
               <span className="ms-2 fs-6 d-none d-sm-inline">Log Out</span>
-                </div>             
-                 </li> 
-            </ul>
+                </NavLink>             
+                 </div> 
+            </div>
             </div>
         </div>
 

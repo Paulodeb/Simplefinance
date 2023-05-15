@@ -142,7 +142,7 @@ const UserDashboard = () => {
                 value=""
                 id="flexCheckDefault"
               />
-              <label className="form-check-label" for="flexCheckDefault">
+              <label className="form-check-label">
                 Organisation
               </label>
             </div>
@@ -154,7 +154,7 @@ const UserDashboard = () => {
                   value=""
                   id="flexCheckDefault"
                 />
-                <label className="form-check-label" for="flexCheckDefault">
+                <label className="form-check-label">
                   A & B Plc
                 </label>
               </div>
@@ -177,7 +177,7 @@ const UserDashboard = () => {
                   value=""
                   id="flexCheckDefault"
                 />
-                <label className="form-check-label" for="flexCheckDefault">
+                <label className="form-check-label">
                   A & B Plc
                 </label>
               </div>
@@ -200,7 +200,7 @@ const UserDashboard = () => {
                   value=""
                   id="flexCheckDefault"
                 />
-                <label className="form-check-label" for="flexCheckDefault">
+                <label className="form-check-label">
                   A & B Plc
                 </label>
               </div>

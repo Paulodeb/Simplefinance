@@ -1,14 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Index from './routes/Index';
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/router";
+
 
 
 function App() {
   return (
-    <div className="">
-      <Index/>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
 export default App;
+
+

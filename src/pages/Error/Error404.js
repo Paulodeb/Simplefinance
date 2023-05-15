@@ -1,11 +1,14 @@
 import React from 'react';
 import logo from '../../assets/logo.svg'
 import error404 from '../../assets/Error404.svg'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useRouteError } from 'react-router-dom';
 
 const Error404 = () => {
+  const error = useRouteError();
+  console.log(error);
+
   return (
-    <div>
+    <div id='error-page'>
     <nav className="navbar login border navbar-expand-lg fixed-top navbar-light bg-white">
         <div className="container-fluid">
           <NavLink to="/" className="navbar-brand w-50">

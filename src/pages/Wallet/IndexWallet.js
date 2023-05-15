@@ -1,37 +1,18 @@
 import React, { useState } from "react";
 import "./WalletStyles.css";
-import { NavLink, Outlet } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 import {
   MdOutlineKeyboardArrowDown,
-  MdContentCopy,
-  MdMoreVert,
   MdGroup,
   MdLogout,
   MdDownload, 
 } from "react-icons/md";
-import { AiOutlineEye } from "react-icons/ai";
 import { BsBell } from "react-icons/bs";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import Uploader from '../../components/Uploader'
-import Slider from "react-slick";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
-  labels: [],
-  datasets: [
-    {
-      label: "",
-      data: [30, 70],
-      backgroundColor: ["rgba(63, 188, 252, 1)", "rgba(153, 255, 255, 1)"],
-    },
-  ],
-};
-
-const IndexWallet = () => {
+ const IndexWallet = () => {
   const [show, setShow] = useState(false);
   const [select, setSelect] = useState(false);
   const [menuselect, setMenuselect] = useState(false);
@@ -85,11 +66,8 @@ const IndexWallet = () => {
 
   return (
     <div className="row w-100" >
-      <div className="col-2 border">
-        <Sidebar />
-      </div>
-      <div className="col-10 border">
-        <div className="d-flex flex-wrap container justify-content-end">
+      <div className="col-12">
+        <div className="d-flex flex-wrap justify-content-end">
           <div className=" d-flex ">
             <div className="d-flex mt-3 justify-content-center">
               <BsBell size={25} />
@@ -222,14 +200,14 @@ const IndexWallet = () => {
             <label className="mt-3">Source Wallet</label>
             <select className="form-select" aria-label="Default select example">
               <option selected>Select wallet</option>
-              <option value="1">Edit Access</option>
-              <option value="2">Delete Access</option>
+              <option >Edit Access</option>
+              <option >Delete Access</option>
             </select>
             <label className="mt-3">Bank</label>
             <select className="form-select" aria-label="Default select example">
               <option selected>Select beneficiary bank</option>
-              <option value="1">Edit Access</option>
-              <option value="2">Delete Access</option>
+              <option >Edit Access</option>
+              <option >Delete Access</option>
             </select>
             <label className="mt-3">Beneficiary Account</label>
             <input type="text" className="form-control" placeholder="Enter beneficiary account"/>
@@ -613,10 +591,6 @@ const IndexWallet = () => {
           <h3>Wallet</h3>
           <button className="btn btn-primary">Add New Wallet</button>
         </div>
-
-       <div>
-        <Outlet/>
-       </div>
       </div>
     </div>
   );

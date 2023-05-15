@@ -32,7 +32,7 @@ const CreateAccount = () => {
             <div className="px-3 px-sm-3 px-md-5">
                 <div className='px-sm-5'>
 
-              <label className="mb-2" htmlFor="name">
+              <label className="mb-2">
                 Email Address
                 </label>
               <input
@@ -41,7 +41,7 @@ const CreateAccount = () => {
                 id="email"
                 placeholder="Enter your email address"
                 />
-              <label className="mb-2" htmlFor="name">
+              <label className="mb-2">
                 Phone Number
               </label>
               <input
@@ -50,7 +50,7 @@ const CreateAccount = () => {
                 id="phone"
                 placeholder="Enter your phone number"
                 />
-              <label className="mb-2" htmlFor="name">
+              <label className="mb-2">
                 Password
               </label>
               <input
@@ -59,7 +59,7 @@ const CreateAccount = () => {
                 id="password"
                 placeholder="Enter your password"
                 />
-              <label className="mb-2" htmlFor="name">
+              <label className="mb-2">
                 NIN
               </label>
               <input
@@ -68,7 +68,7 @@ const CreateAccount = () => {
                 id="nin"
                 placeholder="Enter your NIN"
               />
-              <label className="mb-2" htmlFor="name">
+              <label className="mb-2">
                 BVN
               </label>
               <input
@@ -82,10 +82,9 @@ const CreateAccount = () => {
               <input
                 className="form-check-input me-1 mb-3 border"
                 type="checkbox"
-                value=""
                 id="flexCheckDefault"
                 />
-              <label className="form-check-label" for="flexCheckDefault">
+              <label className="form-check-label">
                 I've read and agreed to the Terms of Service
               </label>
                 </div>

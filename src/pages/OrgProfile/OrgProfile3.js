@@ -21,22 +21,22 @@ const OrgProfile3 = () => {
        <h1 className='px-sm-5 px-md-3 px-lg-5 px-3'>Director(s) KYC</h1>
        <form>
          <div className='form-group px-3 px-md-3 px-lg-5 px-sm-5'>
-           <label htmlFor='Director1'>Director 1</label>
+           <label>Director 1</label>
            <input type='text' className='form-control mb-2' id='Director1' placeholder='Emmanuel Adebayo' />
-           <label htmlFor='BVN'>BVN</label>
+           <label>BVN</label>
            <input type='BVN' className='form-control mb-2' id='BVN' placeholder='Enter BVN' />
-           <label htmlFor='NIN'>NIN</label>
+           <label>NIN</label>
            <input type='text' className='form-control mb-2' id='Address' placeholder='Enter NIN' />
-           <label htmlFor='Director2'>Director 2</label>
+           <label>Director 2</label>
            <input type='text' className='form-control mb-2' id='Director2' placeholder='Emmanuel Adebayo' />
-           <label htmlFor='BVN'>BVN</label>
+           <label>BVN</label>
            <input type='BVN' className='form-control mb-2' id='BVN' placeholder='Enter BVN' />
-           <label htmlFor='NIN'>NIN</label>
+           <label>NIN</label>
            <input type='text' className='form-control' id='Address' placeholder='Enter NIN' />
            <button 
            onClick={(e) => {
              e.preventDefault();
-             navigate('/add-org-details');
+             navigate('/user-dashboard');
            }}
            type='submit' className='btn btn-primary w-100 mt-4'>Continue</button>
          </div>

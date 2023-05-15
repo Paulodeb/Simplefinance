@@ -66,7 +66,7 @@ const GetStarted = () => {
             <h4 className='card-title text-center mb-3'>Join an existing organisation</h4>
           <p className=' text-center '>Send a request to the organisation's manager to be added as a staff.</p>
           <div className='px-4'>
-          <label className='mb-1' for="email">Email Address</label>
+          <label className='mb-1'>Email Address</label>
             <input type="email" className="form-control" id="email" placeholder="Enter organisation email address" />
             <Button variant="primary" className='mt-3 w-100'>Send Request To Join</Button>
           </div>

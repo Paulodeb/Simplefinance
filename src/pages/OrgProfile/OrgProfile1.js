@@ -22,15 +22,15 @@ const OrgProfile1 = () => {
           <p className='px-5'>Let us get your organisational details in order to set up your profile</p>
           <form>
             <div className='form-group px-3 px-md-3 px-lg-5 px-sm-5'>
-              <label htmlFor='orgName'>Organisation Name</label>
+              <label>Organisation Name</label>
               <input type='text' className='form-control mb-3' id='orgName' placeholder='Enter your organisation name' />
-              <label htmlFor='Email'>Email Address</label>
+              <label>Email Address</label>
               <input type='email' className='form-control mb-3' id='Email' placeholder='Enter your email address' />
-              <label htmlFor='Address'>Address</label>
+              <label>Address</label>
               <input type='text' className='form-control mb-3' id='Address' placeholder='Enter your address' />
-              <label htmlFor='Phone'>Phone Number</label>
+              <label>Phone Number</label>
               <input type='number' className='form-control mb-3' id='Phone' placeholder='Enter your phone number' />
-              <label htmlFor='RC'>RC Number</label>
+              <label>RC Number</label>
               <input type='number' className='form-control' id='RC' placeholder='Enter your RC number' />
               <button 
               onClick={(e) => {

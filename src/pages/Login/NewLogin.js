@@ -6,7 +6,7 @@ import './LoginStyles.css'
 const NewLogin = () => {
   return (
     <>
-    <body className='bg-light'
+    <div className='bg-light'
     // style={{paddingTop: '4rem'}}
     >
      <nav className="navbar login border navbar-expand-lg navbar-light bg-white fixed-top">
@@ -42,7 +42,7 @@ const NewLogin = () => {
   </form>
 </div>
 
-    </body>
+    </div>
     </>
   )
 }
